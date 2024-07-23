@@ -1,5 +1,7 @@
 # Javascript
 
+JavaScript is a dynamically typed language.
+
 ## variables
 
 const
@@ -19,6 +21,27 @@ Note:- Prefer not to use **var** because of issue n block scope and functional s
 - Undefined
 - Symbol
 - Object and some more
+
+Data Type are two types are:
+
+- primitive
+- Reference (Non-primitive)
+
+primitive Data type are 7 types:
+
+- String
+- Number
+- Boolean
+- null
+- undefined
+- Symbol
+- BigInt
+
+Non-primitive Data type are 3 types:
+
+- Array
+- Objects
+- Function
 
 ## Data Type Conversion
 
@@ -65,3 +88,17 @@ Note:- Prefer not to use **var** because of issue n block scope and functional s
 | null | string | null|
 |undefine | string | undefine|
 | NaN | boolean | NaN|
+
+- **typeof return results**
+
+|Type | Result |
+|-----|--------|
+|Undefined | undefined|
+|null | object |
+|Boolean | boolean|
+|Number | number |
+|Bigint | bigint|
+|string | string|
+|Symbol | symbol|
+| Function | function|
+|Any other object | object|
