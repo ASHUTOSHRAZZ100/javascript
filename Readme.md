@@ -102,3 +102,8 @@ Non-primitive Data type are 3 types:
 |Symbol | symbol|
 | Function | function|
 |Any other object | object|
+
+## Memory
+
+- Stack
+- Heap
