@@ -65,3 +65,8 @@ Note:- Prefer not to use **var** because of issue n block scope and functional s
 | null | string | null|
 |undefine | string | undefine|
 | NaN | boolean | NaN|
+
+## Memory
+
+- Stack
+- Heap
