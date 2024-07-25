@@ -42,6 +42,34 @@ chai1 ()
 
 // ========================= Arrow function ========================
 
+const chai2 = () =>{
+    let username = "RAj";
+    console.log(this.username) // undefine
+}
+
+// explicit return
+const addition = (num1,num2) => {
+    return num1+num2
+}
+
+console.log(addition(5,8)) // 13
+
+// Implicit return
+const addition1 = (num1,num2) => num1+num2
+
+console.log(addition1(4,6)) // 10
+
+const addition3  = (num1, num2) => (num1+num2)
+
+console.log(addition3(6,8)) // 14
+
+const fun = ()=>({username : "ashutosh"})
+
+console.log(fun()) // { username: 'ashutosh' }
+console.log(fun().username) // ashutosh
+console.log(fun()["username"]) // ashutosh
+
+
 
 
 
