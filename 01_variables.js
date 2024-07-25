@@ -39,3 +39,19 @@ console.log(val3) // 40
 console.log(val4) // 7
 
 
+// =========================== Nested Scope ======================
+
+function one(){
+    const username = "Raj"
+
+    function two(){
+        const website = "youtube"
+        console.log(username);
+    }
+
+    // console.log(website) // error because website is not define in this scope
+    two()
+}
+
+one()
+
