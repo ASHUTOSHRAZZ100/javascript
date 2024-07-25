@@ -7,14 +7,14 @@ Object.create
 const mySymbol = Symbol(56)
 
 const JsUser = {
-    name : "Ashutosh",
-    "last name" : "Raj",
-    [mySymbol] : 2,
-    age : 22,
-    location : "Sitamarhi",
-    email : "ashutoshrazz100@gamil.com",
-    isLoggedIn : false,
-    lastLoginDays : ["Monday", "Saturday"]
+    name: "Ashutosh",
+    "last name": "Raj",
+    [mySymbol]: 2,
+    age: 22,
+    location: "Sitamarhi",
+    email: "ashutoshrazz100@gamil.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
 }
 
 // console.log(JsUser.email)
@@ -35,7 +35,7 @@ JsUser.age = 80
 // console.log(JsUser)
 
 // insert function in object
-JsUser.greeting = function (){
+JsUser.greeting = function () {
     // console.log(`Hello Js User, ${this.name} ${this["last name"]}`)
     // return "hii"
 }
@@ -51,33 +51,33 @@ const tinderUser = new Object() // this is called singleton object
 const tinderUser1 = {} // this is called non-singleton object 
 // console.log(tinderUser1) // {}
 
- tinderUser.id = "156sdf"
- tinderUser.name = "Rohan"
- tinderUser.isLoggedIn = false
- console.log(tinderUser)
+tinderUser.id = "156sdf"
+tinderUser.name = "Rohan"
+tinderUser.isLoggedIn = false
+//  console.log(tinderUser)
 
- const regularUser = {
-    email : "ashutoshrazz100@gmal.com",
-    fullname :{
-        userFullname :{
-            firstname : "Ashu",
-            lastname : "Raj"
+const regularUser = {
+    email: "ashutoshrazz100@gmal.com",
+    fullname: {
+        userFullname: {
+            firstname: "Ashu",
+            lastname: "Raj"
         }
     }
- }
+}
 
 //  console.log(regularUser.fullname.userFullname.firstname) // Ashu
 //                                     // Or 
 //  console.log(regularUser["fullname"]["userFullname"]["firstname"]) // Ashu
 
- const obj1 = {
-    1:"a", 2 : "c" ,3 : "d"
- }
- const obj2 = {
-    4 : "s",5 : "f"
- }
+const obj1 = {
+    1: "a", 2: "c", 3: "d"
+}
+const obj2 = {
+    4: "s", 5: "f"
+}
 
- const obj3 = {obj1,obj2}
+const obj3 = { obj1, obj2 }
 //  console.log(obj3) 
 // {
 //    obj1: { '1': 'a', '2': 'c', '3': 'd' },
@@ -87,41 +87,73 @@ const tinderUser1 = {} // this is called non-singleton object
 // console.log(obj3.obj1[1]) // a
 // console.log(obj3["obj2"][5]) // f
 
-const obj4 = Object.assign(obj1,obj2) // you can write like this also but it is not good practice
+const obj4 = Object.assign(obj1, obj2) // you can write like this also but it is not good practice
 // console.log(obj4) // { '1': 'a', '2': 'c', '3': 'd', '4': 's', '5': 'f' }
 
-const obj5 = Object.assign({},obj1,obj2) // this is good practice
+const obj5 = Object.assign({}, obj1, obj2) // this is good practice
 // console.log(obj5) // { '1': 'a', '2': 'c', '3': 'd', '4': 's', '5': 'f' }
 
-const obj6 = {...obj1,...obj2} // or use this syntax
+const obj6 = { ...obj1, ...obj2 } // or use this syntax
 // console.log(obj6) // { '1': 'a', '2': 'c', '3': 'd', '4': 's', '5': 'f' }
 
 const user = [
     {
-        id : 1,
-        email : "razz100@gmail.com"
+        id: 1,
+        email: "razz100@gmail.com"
     },
     {
-        id : 1,
-        email : "razz100@gmail.com"
+        id: 1,
+        email: "razz100@gmail.com"
     },
     {
-        id : 1,
-        email : "razz100@gmail.com"
+        id: 1,
+        email: "razz100@gmail.com"
     },
     {
-        id : 1,
-        email : "razz100@gmail.com"
+        id: 1,
+        email: "razz100@gmail.com"
     },
 ]
 
-console.log(user[1].email)
+// console.log(user[1].email)
 
-console.log(Object.keys(tinderUser)) // [ 'id', 'name', 'isLoggedIn' ]
+// console.log(Object.keys(tinderUser)) // [ 'id', 'name', 'isLoggedIn' ]
 
-console.log(Object.values(tinderUser)) // [ '156sdf', 'Rohan', false ]
+// console.log(Object.values(tinderUser)) // [ '156sdf', 'Rohan', false ]
 
-console.log(Object.entries(tinderUser)) // [ [ 'id', '156sdf' ], [ 'name', 'Rohan' ], [ 'isLoggedIn', false ] ]
+// console.log(Object.entries(tinderUser)) // [ [ 'id', '156sdf' ], [ 'name', 'Rohan' ], [ 'isLoggedIn', false ] ]
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")) // true
-console.log(tinderUser.hasOwnProperty("isSingedIn")) // false
+// console.log(tinderUser.hasOwnProperty("isLoggedIn")) // true
+// console.log(tinderUser.hasOwnProperty("isSingedIn")) // false
+
+
+// ============================     Advanced object =============================
+
+const course = {
+
+    courseName: "Javascript",
+    price: "99",
+    courseInstructor: "Raj",
+}
+
+// console.log(course.courseInstructor) // Raj
+
+// Or
+
+// destructing the object
+const { courseInstructor, price } = course
+console.log(courseInstructor) // Raj
+
+const { courseInstructor: instructor } = course // destructure object name
+console.log(instructor) // Raj
+
+
+
+
+
+
+
+
+
+
+
