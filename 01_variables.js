@@ -23,3 +23,19 @@ accountCity = "Pune"
 console.log(accountEmail)
 
 console.table([accountId,accountEmail,accountPassword,accountCity,accountState])
+
+// =========================== Scope ===========================
+
+if (true ){
+    let val1 = 10;
+    const val2 = 30;
+    var val3 = 40;
+    val4 = 70;
+}
+
+// console.log(val1) // error
+// console.log(val2) // error
+console.log(val3) // 40
+console.log(val4) // 7
+
+
