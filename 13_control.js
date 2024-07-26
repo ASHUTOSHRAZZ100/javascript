@@ -68,6 +68,13 @@ else{
     console.log("less than 1200")
 }
 
+// && (and), || (or)
 
+const userLoggedIn = true
+const debitCard = true
+
+if(userLoggedIn && debitCard){
+    console.log("Allow tio buy course")
+}
 
 
