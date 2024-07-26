@@ -62,5 +62,11 @@ console.log(val3) // 20
 let val4 = null ?? 10 ?? 15
 console.log(val4)
 
+// Terniary Operator
 
+// syntax  condition ? true : false
+
+const iceTeaPrice = 100
+
+iceTeaPrice <= 80 ? console.log("less than price 80") : console.log("more than 80")
 
