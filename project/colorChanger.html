@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+</head>
+
+<body style="background-color: gray;">
+
+    <div style="text-align: center; margin-top: 20%;">
+        <h1>Color Schema Switcher</h1>
+        <div>
+            <button class="button" id="red"
+                style="border-radius:15px;font-size: medium;font-weight:bold; background-color: Red;color: aliceblue;  padding: 2%; margin: 1%;">Red</button>
+            <button class="button" id="blue"
+                style="border-radius:15px; font-size: medium;font-weight:bold; background-color: blue;color: aliceblue; padding: 2%; margin: 1%;">Blue</button>
+            <button class="button" id="black"
+                style="border-radius:15px; font-size: medium;font-weight:bold; background-color: Black; color: aliceblue;padding: 2%; margin: 1%;">Black</button>
+            <button class="button" id="white"
+                style="border-radius:15px; font-size: medium;font-weight:bold; background-color: white;padding: 2% ;margin: 1%;">White</button>
+            <button class="button" id="yellow"
+                style="border-radius:15px; font-size: medium;font-weight:bold; background-color: yellow;padding: 2% ;margin: 1%;">Yellow</button>
+            <button class="button" id="pink"
+                style="border-radius:15px; font-size: medium;font-weight:bold; background-color: pink;padding: 2% ;margin: 1%;">Pink</button>
+        </div>
+        <p style="font-size:x-large; font-weight: bold;">Try clicking one of the color above to change the background
+            color of this page!</p>
+    </div>
+</body>
+<script>
+    const h1 = document.querySelector("h1")
+    const p = document.querySelector("p")
+    const button = document.querySelectorAll(".button")
+    const body = document.querySelector("body")
+
+    button.forEach((buttons) => {
+        buttons.addEventListener("click", (event) => {
+            // console.log(event)
+            // console.log(event.target)
+            if (event.target.id === 'red') body.style.backgroundColor = "Red"
+            if (event.target.id === 'blue') body.style.backgroundColor = "Blue"
+            if (event.target.id === 'black') {
+                h1.style.color = "aliceblue"
+                p.style.color = "aliceblue"
+                body.style.backgroundColor = "Black"
+            }
+            if (event.target.id === 'white') {
+                h1.style.color = "Black"
+                p.style.color = "Black"
+                body.style.backgroundColor = "White"
+            }
+            if (event.target.id === 'yellow') body.style.backgroundColor = "Yellow"
+            if (event.target.id === 'pink') body.style.backgroundColor = "Pink"
+        })
+    })
+</script>
+
+</html>
