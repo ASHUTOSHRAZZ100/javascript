@@ -59,29 +59,30 @@ while (index <= 10) {
 // foreach Loop
 
 // syntax foreach((item,index,array)=>{})
+// foreach value return nahi kara tha ha 
 
 // Note :- callback function does not have a name 
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
 coding.forEach(function (item) {
-    console.log(item)
+    // console.log(item)
 })
 
 // Or
 
 coding.forEach((val) => {
-    console.log(val)
+    // console.log(val)
 })
 
 function printMe(item) {
-    console.log(item)
+    // console.log(item)
 }
 
 coding.forEach(printMe)
 
 coding.forEach((item, index, arr) => {
-    console.log(item, index, arr)
+    // console.log(item, index, arr)
 })
 
 const myCoding = [
@@ -105,7 +106,7 @@ const myCoding = [
 
 
 myCoding.forEach((item)=>{
-    console.log(item.languageName)
+    // console.log(item.languageName)
 })
 
 
@@ -114,8 +115,33 @@ const values = coding.forEach((item)=>{
     return item
 })
 
-console.log(values)
+// console.log(values)
 
 
+// filter
 
+// filter value return kara ta ha 
 
+const myNumber = [1,2,3,4,5,6,7,8,9,10]
+
+const newNum = myNumber.filter((num)=> num > 4)
+
+// console.log(newNum)
+
+// Or 
+
+const newNum1 = myNumber.filter((num) => {
+    return num > 5
+})
+console.log(newNum1)
+
+// By using foreach
+
+const newNum2 = []
+myNumber.forEach((num) => {
+    if(num > 6){
+        newNum2.push(num)
+    }
+})
+
+console.log(newNum2)
