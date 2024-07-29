@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Clock</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <div style="text-align: center;margin: 20%; font-size: x-large;">
+        <p> <b>Your local time</b></p>
+        <div style="color:azure;">
+            <h1 id="clock"></h1>
+        </div>
+    </div>
+    <script>
+        const clock = document.querySelector("#clock")
+
+        setInterval(function () {
+            const date = new Date().toLocaleTimeString()
+            // console.log(date)
+            clock.innerHTML = date
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
