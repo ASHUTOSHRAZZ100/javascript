@@ -50,6 +50,16 @@
         console.log("google.clicked")    
     },false)
     
+    document.getElementById("images").addEventListener("click",(event)=>{
+        // console.log(event);
+        // console.log(event.target);
+        // console.log(event.target.parentNode);
+        let removeIt = event.target.parentNode;
+        // removeIt.remove();
+        // Or
+        // console.log(removeIt)
+        removeIt.parentNode.removeChild(removeIt)
+    },false)
 
 </script>
 
