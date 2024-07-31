@@ -45,7 +45,10 @@
         event.stopPropagation() // no bubbling
     },true)
 
-
+    document.getElementById("google").addEventListener("click",(event)=>{
+        event.preventDefault();
+        console.log("google.clicked")    
+    },false)
     
 
 </script>
