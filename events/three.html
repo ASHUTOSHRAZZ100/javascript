@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cha aur JS</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    // setInterval
+    
+    let intervalId = setInterval((name)=>{
+        console.log(name,new Date().getSeconds())
+    },1000,"Kumar");
+
+//    const intervalId = setInterval((name)=>{
+//         console.log(name,date)
+//     },1000,"Kumar")
+
+    // clearInterval
+    // clearInterval(intervalId)
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearInterval(intervalId);
+    })
+
+    document.querySelector("#start").addEventListener("click",()=>{
+        intervalId = setInterval((name)=>{
+        console.log(name,new Date().getSeconds())
+    },1000,"Kumar")
+    })
+
+</script>
+</html>
