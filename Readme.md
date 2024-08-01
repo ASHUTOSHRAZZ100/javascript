@@ -120,7 +120,6 @@ Non-primitive Data type are 3 types:
 - setTimeout is a method or function which iterate once.
 - We can use clearTimeout method to stop setTimeout by giving its reference.
 
-syntax
 ```javaScript
 
     // 2000 means 2 second
@@ -129,5 +128,20 @@ syntax
     },2000,"Ashutosh Raj")
     
     clearTimeout(stop);
+
+```
+## setInterval
+
+- setInterval is a method or function which iterate continue in given timestamp.
+- We can use clearInterval method to stop setTimeout by giving its reference.
+
+```javaScript
+
+    // 2000 means 2 second
+   const stop =  setInterval((name)=>{
+        console.log(name)
+    },2000,"Ashutosh Raj")
+    
+    clearInterval(stop);
 
 ```
