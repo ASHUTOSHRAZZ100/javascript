@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Change Color </title>
+</head>
+<body>
+    <h1>Start should change the Background color every second</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    let change = null;
+
+    document.querySelector('#start').addEventListener("click",()=>{
+       change = setInterval(()=>{
+      
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        const randomColorText = Math.floor(Math.random() * 16124215).toString(16);
+        console.log("random",randomColor)
+        const color = randomColor.padStart(6, '0'); // fullfil the length requirement
+        const colorText = randomColorText.padStart(6, '0');
+        console.log(color)
+        document.querySelector("body").style.backgroundColor = `#${randomColor.padStart(6, '0')}`;
+        document.querySelector("h1").style.color = `#${colorText}`
+       },1000)
+    },false)
+
+    document.querySelector("#stop").addEventListener("click",()=>{
+        clearInterval(change);
+    })
+
+</script>
+</html>
