@@ -107,3 +107,10 @@ Non-primitive Data type are 3 types:
 
 - Stack
 - Heap
+
+## Event
+
+|Event | Description|
+|-----|--------| 
+|onchange | An HTML element has been changed|
+|onclick  |The user clicks an HTML element|
