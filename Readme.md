@@ -114,3 +114,20 @@ Non-primitive Data type are 3 types:
 |-----|--------| 
 |onchange | An HTML element has been changed|
 |onclick  |The user clicks an HTML element|
+
+## setTimeout
+
+- setTimeout is a method or function which iterate once.
+- We can use clearTimeout method to stop setTimeout by giving its reference.
+
+syntax
+```javaScript
+
+    // 2000 means 2 second
+   const stop =  setTimeout((name)=>{
+        console.log(name)
+    },2000,"Ashutosh Raj")
+    
+    clearTimeout(stop);
+
+```
