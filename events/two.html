@@ -12,9 +12,10 @@
 <script>
     // setTimeout
 
-    const changeMe = setTimeout(()=>{
+    const changeMe = setTimeout((name)=>{
+        console.log(name)
         document.querySelector('h1').innerHTML = "Ashutosh Raj"
-    },2000) // it works one time
+    },2000,"kumar") // it works one time
 
     // clearTimeout
 
