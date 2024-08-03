@@ -22,7 +22,7 @@ let chai = new User1('chai','chai@gmail.com','12365')
 console.log(chai.encryptPassword())
 console.log(chai.changeUsername())
 
-// behind scene
+// behind the scene
 
 function User(username,email,password){
     this.username = username;
