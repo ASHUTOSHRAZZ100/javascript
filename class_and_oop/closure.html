@@ -52,5 +52,34 @@
 
 
 </script>
+<script>
+    document.querySelector('#orange').addEventListener('click',function(){
+        document.querySelector('body').style.backgroundColor = 'orange'
+    })
+    document.querySelector('#green').addEventListener('click',function(){
+        document.querySelector('body').style.backgroundColor = 'green'
+    })
 
+    function clickHandler(color){
+        // document.querySelector('body').style.backgroundColor = `${color.id}`
+        console.log(color.id)
+        return function(){
+        document.querySelector('body').style.backgroundColor = `${color.id}`
+        }
+    }
+
+    function clickHandler2(color){
+        // document.querySelector('body').style.backgroundColor = `${color}`
+        console.log(color)
+        return function(){
+        document.querySelector('body').style.backgroundColor = `${color}`
+        }
+    }
+
+    document.querySelector('#yellow').addEventListener('click',clickHandler(yellow))
+    document.querySelector('#pink').addEventListener('click',clickHandler(pink))
+    document.querySelector('#blue').onclick = clickHandler2('blue')
+    document.querySelector('#red').onclick = clickHandler2('red')
+
+</script>
 </html>
